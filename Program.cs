@@ -54,6 +54,14 @@ namespace LambdaExpressionDemo
                 Console.WriteLine("Average age");
             }
         }
+        // uc 5
+        public static void FindPerson(string name, List<Person> listPersonsInCity)
+        {
+            foreach (var data in listPersonsInCity.FindAll(x => x.Name == name).ToList())
+            {
+                Console.WriteLine(data.name);
+            }
+        }
     }
 }
 
