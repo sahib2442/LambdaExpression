@@ -45,6 +45,16 @@ namespace LambdaExpressionDemo
             {
                 Console.WriteLine("Yes , We have some teen-agers in the list");
             }
+        }
+        // uc4
+        private static void CheckingForAverageAge(List<Person> listPersonsIncity)
+        {
+            if (listPersonsInCity.Average(e => (e.Age +=( e.Age))/2 ) > 0)
+            {
+                Console.WriteLine("Average age");
+            }
+        }
+    }
 }
 
        
