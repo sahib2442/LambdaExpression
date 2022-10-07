@@ -71,6 +71,17 @@ namespace LambdaExpressionDemo
                 Console.WriteLine(item.Name);
             }
         }
+        // uc 7
+        public static void RemoveGivenPerson(string name, List<Person> listPersonsInCity)
+        {
+            Console.WriteLine("----------------------");
+            listPersonsInCity.RemoveAll(x => x.Name == name);
+            foreach (var item in listPersonsInCity)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
+
     }
 }
 
