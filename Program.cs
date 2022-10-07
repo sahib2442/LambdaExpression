@@ -46,6 +46,41 @@ namespace LambdaExpressionDemo
                 Console.WriteLine("Yes , We have some teen-agers in the list");
             }
         }
+        // uc4
+        private static void CheckingForAverageAge(List<Person> listPersonsIncity)
+        {
+            if (listPersonsInCity.Average(e => (e.Age +=( e.Age))/2 ) > 0)
+            {
+                Console.WriteLine("Average age");
+            }
+        }
+        // uc 5
+        public static void FindPerson(string name, List<Person> listPersonsInCity)
+        {
+            foreach (var data in listPersonsInCity.FindAll(x => x.Name == name).ToList())
+            {
+                Console.WriteLine(data.name);
+            }
+        }
+        // uc 6
+        public static void SkipPerson(string name, List<Person> listPersonsInCity)
+        {
+            var data = listPersonsInCity.FindAll(x => x.Age < 60).ToList();
+            foreach (var item in listPersonsInCity.OrderBy(x => x.Age).Skip(data.Count))
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
+        // uc 7
+        public static void RemoveGivenPerson(string name, List<Person> listPersonsInCity)
+        {
+            Console.WriteLine("----------------------");
+            listPersonsInCity.RemoveAll(x => x.Name == name);
+            foreach (var item in listPersonsInCity)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
     }
 }
 
