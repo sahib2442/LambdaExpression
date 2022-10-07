@@ -62,6 +62,15 @@ namespace LambdaExpressionDemo
                 Console.WriteLine(data.name);
             }
         }
+        // uc 6
+        public static void SkipPerson(string name, List<Person> listPersonsInCity)
+        {
+            var data = listPersonsInCity.FindAll(x => x.Age < 60).ToList();
+            foreach (var item in listPersonsInCity.OrderBy(x => x.Age).Skip(data.Count))
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
     }
 }
 
